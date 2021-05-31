@@ -1,1 +1,76 @@
-theme: jekyll-theme-minimal
+title: bytexpert.io
+description: bytexpert.io
+lang: en-US
+timezone: Asia/Jakarta # <3 Java
+image: assets/img/avatar.png
+repo: https://github.com/bytexpert/bytexpert.github.io
+mode: dark
+
+# Profile settings
+author:
+  name: /bytexpert.io
+  bio: /software /engineering
+  username: bytexpert
+  github: bytexpert
+  twitter: bytexpert
+  facebook: bytexpert
+  email: contact@bytexpert.io
+  avatar: /assets/img/avatar-192x192.png
+
+url: "https://bytexpert.io"
+baseurl:
+permalink: /:title/
+google_analytics:
+fb_appid:
+
+collections:
+  posts:
+    output: true
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+number_of_posts: 5
+
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
